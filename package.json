@@ -1,0 +1,34 @@
+{
+  "name": "lunsjbot",
+  "version": "1.0.0",
+  "description": "Report what's for lunch",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r babel-register -r config-variables index.js",
+    "report": "node -r babel-register -r config-variables reportToSlack.js"
+  },
+  "author": "Einar Löve <post@einarlove.com>",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@unfold/babel-preset"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@unfold/eslint-config"
+  },
+  "dependencies": {
+    "@unfold/babel-preset": "^1.0.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "config-variables": "^1.1.0",
+    "date-fns": "^1.11.2",
+    "scrape-it": "^3.2.2",
+    "slack": "^8.1.1"
+  },
+  "devDependencies": {
+    "@unfold/eslint-config": "^1.3.2",
+    "eslint": "^3.11.1"
+  }
+}
