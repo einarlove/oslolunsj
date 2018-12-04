@@ -18,7 +18,7 @@ http.createServer((req, res) => {
   getLunchData(date)
     .then(menu => {
       const dateLabel = daysFromNow ? `på ${getWeekdayName(date).toLowerCase()}` : 'idag'
-      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
       res.write(`<strong>Dagens menu ${dateLabel} er</strong>`)
       res.write('<ul>')
       res.write(menu.map(item => `<li>${item}</li>`).join(''))
