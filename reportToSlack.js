@@ -27,5 +27,6 @@ getLunchData(today).then(menu => {
 
     console.log(data)
   })
+}).catch(error => {
+  console.log(error)
 })
-
